@@ -1,0 +1,99 @@
+<html>
+<head>
+
+	
+	<title>Trollogical</title>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+
+var Primary_key = null;
+
+
+var SIZE = 0;
+
+function fun(key)
+{
+
+ console.log("CALLED")
+
+
+
+
+
+
+   $.ajax({url: "getTroll?Primary_key=" + key, success: function(result){
+
+if(result.msg ==200)
+{
+  console.log("ERROR ");
+
+  // ERROR
+}
+else 
+{
+
+console.log("SUCCESS " )
+
+if( result.data.length == 0 )
+{
+
+
+
+  // STOP KHTAM HO GAYA BHAIYA TRTOLL KA DB
+console.log("KHATAM BHAIYA ");
+}
+
+else
+{
+  for(var x in result.data)
+{
+  console.log(result.data[x].full_picture);
+}
+
+SIZE += result.data.length;
+
+//console.log(result.data.length + " " + result.data[result.data.length - 1]._id );
+console.log(result.data.length + " " + result.data[0]._id );
+ //fun( result.data[result.data.length - 1]._id )
+ fun( result.data[result.data.length - 1]._id )
+
+}
+
+
+}
+
+
+    } , error: function(error) {
+fun(key)
+      console.log("FAILED")
+
+    } })
+
+ 
+
+//setTimeout(fun(Primary_key), 3000)
+
+}
+//fun("55d0a61c5d43d3320c548a27");
+
+fun(-1)
+
+</script>
+
+</head>
+
+
+<body>
+
+
+
+</body>
+
+
+</html>

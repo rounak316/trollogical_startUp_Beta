@@ -1,0 +1,19 @@
+{
+  "name": "troller",
+  "version": "1.0.0",
+  "description": "A project, which will show you all the feeds from popular troll websites, all at one place.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "fbgraph": "^1.1.0",
+    "mongodb": "^2.0.41",
+    "reload": "^0.3.0",
+    "supervisor": "^0.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

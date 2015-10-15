@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Magnetic - Stunning Responsive HTML5/CSS3 Photography Wensite Template</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website template"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+
+
+
+<script type="text/javascript">
+
+
+var Primary_key = -1;
+
+
+var SIZE = 0;
+
+function fun(key)
+{
+
+ console.log("CALLED")
+
+
+
+
+
+
+   $.ajax({url: "getTroll?Primary_key=" + key, success: function(result){
+
+if(result.msg ==200)
+{
+  console.log("ERROR ");
+
+  // ERROR
+}
+else 
+{
+
+console.log("SUCCESS " )
+
+if( result.data.length == 0 )
+{
+
+
+
+  // STOP KHTAM HO GAYA BHAIYA TRTOLL KA DB
+console.log("KHATAM BHAIYA ");
+}
+
+else
+{
+  Primary_key = result.data[result.data.length - 1]._id ;
+  for(var x in result.data)
+{
+
+var msg = "";
+if(typeof result.data[x].name !== "undefined")
+msg += result.data[x].name + "<br>"
+if(typeof result.data[x].caption !== "undefined")
+msg += result.data[x].name
+
+  addBaby( result.data[x].full_picture ,  msg )
+  console.log(result.data[x].full_picture);
+}
+
+SIZE += result.data.length;
+
+// console.log(result.data.length + " " + result.data[result.data.length - 1]._id );
+// console.log(result.data.length + " " + result.data[0]._id );
+
+
+
+ //fun( result.data[result.data.length - 1]._id )
+ //fun( result.data[result.data.length - 1]._id )
+
+}
+
+
+}
+
+
+    } , error: function(error) {
+fun(key)
+      console.log("FAILED")
+
+    } })
+
+ 
+
+//setTimeout(fun(Primary_key), 3000)
+
+}
+
+
+function addBaby(image , caption)
+{
+
+  var ChemicalX  = '<div class="work"><a href="inner.html"><img src="'+ image +'" class="media" alt=""/><div class="caption"><div class="work_title"><h1>'+caption+'</h1></div> </div></a></div>';
+
+  $(".main").append(ChemicalX);
+
+
+}
+//fun("55d0a61c5d43d3320c548a27");
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() >= $(document).height()/1.5) {
+
+
+      fun(Primary_key);
+
+
+   }
+});
+//fun(-1)
+$.scrollTop();
+
+fun(Primary_key);
+
+</script>
+
+
+
+
+</head>
+<body>
+
+	<header>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo.png" title="Magnetic" alt="Magnetic"/></a>
+		</div><!-- end logo -->
+
+		<div id="menu_icon"></div>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="selected">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">The Team</a></li>
+				<li><a href="#">Journal</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav><!-- end navigation menu -->
+
+		<div class="footer clearfix">
+			<ul class="social clearfix">
+				<li><a href="#" class="fb" data-title="Facebook"></a></li>
+				<li><a href="#" class="google" data-title="Google +"></a></li>
+				<li><a href="#" class="behance" data-title="Behance"></a></li>
+				<!--<li><a href="#" class="twitter" data-title="Twitter"></a></li>
+				<li><a href="#" class="dribble" data-title="Dribble"></a></li>-->
+				<li><a href="#" class="rss" data-title="RSS"></a></li>
+			</ul><!-- end social -->
+
+			<div class="rights">
+				<p>Copyright © 2014 magnetic.</p>
+				<p>Template by <a href="">Pixelhint.com</a></p>
+			</div><!-- end rights -->
+		</div ><!-- end footer -->
+	</header><!-- end header -->
+
+	<section class="main clearfix">
+		<div class="work">
+			<a href="inner.html">
+				<img src="img/work1.jpg" class="media" alt=""/>
+				<div class="caption">
+					<div class="work_title">
+						<h1>culpa qui officia deserunt mollit</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+
+
+    <div class="work">
+      <a href="inner.html">
+        <img src="img/work4.jpg" class="media" alt=""/>
+        <div class="caption">
+          <div class="work_title">
+            <h1>culpa qui officia deserunt mollit</h1>
+          </div>
+        </div>
+      </a>
+		<div class="work">
+			<a href="inner.html">
+				<img src="img/work2.jpg" class="media" alt=""/>
+				<div class="caption">
+					<div class="work_title">
+						<h1>culpa qui officia deserunt mollit</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="work">
+			<a href="inner.html">
+				<img src="img/work3.jpg" class="media" alt=""/>
+				<div class="caption">
+					<div class="work_title">
+						<h1>culpa qui officia deserunt mollit</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+		</div>
+
+		<div class="work">
+			<a href="inner.html">
+				<img src="img/work5.jpg" class="media" alt=""/>
+				<div class="caption">
+					<div class="work_title">
+						<h1>culpa qui officia deserunt mollit</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="work">
+			<a href="inner.html">
+				<img src="img/work6.jpg" class="media" alt=""/>
+				<div class="caption">
+					<div class="work_title">
+						<h1>culpa qui officia deserunt mollit</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="work">
+			<a href="inner.html">
+				<img src="img/work2.jpg" class="media" alt=""/>
+				<div class="caption">
+					<div class="work_title">
+						<h1>culpa qui officia deserunt mollit</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="work">
+			<a href="inner.html">
+				<img src="img/work3.jpg" class="media" alt=""/>
+				<div class="caption">
+					<div class="work_title">
+						<h1>culpa qui officia deserunt mollit</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="work">
+			<a href="inner.html">
+				<img src="img/work1.jpg" class="media" alt=""/>
+				<div class="caption">
+					<div class="work_title">
+						<h1>culpa qui officia deserunt mollit</h1>
+					</div>
+				</div>
+			</a>
+		</div>
+	</section><!-- end main -->
+	
+</body>
+</html>

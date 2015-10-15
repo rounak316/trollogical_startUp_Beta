@@ -1,0 +1,76 @@
+
+var ID = "986";
+
+function dumy(test , galat , ans)
+{
+
+
+
+for(var ii = 1 ; ii <=60 - galat ; ii++)
+{
+
+delete ans[ii]
+}
+
+
+ var formData = [];
+
+var dat= "";
+var opn = ["A","B","C","D"];
+
+formData.push( {"name":"hdnUserId","value":"lnct" + ID + "@lnct.com"});
+formData.push( {"name":"hdnTestId","value":"" + test});
+
+formData.push( {"name":"hdnTestQues","value":"60"});
+
+for(shivm = 1 ; shivm <= 60 ; shivm++)
+{
+formData.push( {"name":"rQues"+shivm ,"value":"" + ans[shivm]});
+}
+
+
+
+
+
+
+
+
+     
+     {
+       
+        
+
+        var URL = "rProcess.aspx";
+        $.post(URL,
+            formData,
+            function(data, textStatus, jqXHR)
+            {
+dat = JSON.stringify(data);
+
+console.log( "TEST NO : " + test  +dat )
+
+
+              
+	            //data: Data from Server
+            }).fail(function(jqXHR, textStatus, errorThrown) 
+            { $("#msgInfo").html(textStatus);alert("Error");});
+        }
+      }
+
+
+dumy(71 , 31 , [71, "A", "A", "C", "C", "D", "A", "A", "B", "A", "C", "D", "B", "D", "B", "A", "B", "A", "C", "A", "C", "C", "D", "A", "A", "B", "A", "A", "C", "B", "A", "C", "C", "D", "A", "C", "A", "A", "D", "B", "D", "B", "A", "C", "A", "B", "B", "B", "C", "A", "B", "C", "C", "A", "C", "D", "B", "A", "D", "C", "D"])
+
+dumy(70,  39 , [70 , "C", "B", "A", "B", "A", "D", "A", "C", "A", "B", "C", "D", "D", "D", "B", "A", "B", "A", "C", "B", "C", "B", "B", "B", "A", "B", "A", "D", "C", "D", "A", "B", "B", "A", "B", "D", "A", "D", "A", "B", "D", "A", "A", "D", "C", "B", "C", "B", "A", "B", "B", "B", "C", "A", "B", "A", "C", "C", "A", "C"])
+
+dumy(69 , 38, [69, "C", "B", "B", "B", "B", "D", "B", "C", "D", "B", "A", "D", "B", "C", "A", "C", "A", "D", "C", "B", "A", "D", "C", "C", "B", "C", "C", "C", "B", "C", "C", "B", "B", "D", "A", "C", "C", "A", "C", "A", "B", "C", "D", "B", "A", "C", "D", "C", "C", "C", "B", "A", "D", "C", "D", "D", "D", "A", "B", "A"])
+
+dumy(68 , 35 , [68, "D", "D", "C", "D", "B", "B", "A", "B", "C", "B", "C", "A", "A", "B", "D", "B", "B", "C", "C", "C", "C", "B", "B", "C", "B", "C", "B", "D", "C", "B", "C", "D", "D", "D", "C", "D", "B", "D", "D", "B", "C", "A", "B", "D", "C", "B", "C", "B", "C", "B", "A", "D", "B", "C", "C", "D", "C", "D", "D", "C"])
+
+dumy(67, 33 , [67 , "B", "B", "D", "B", "B", "A", "D", "C", "C", "A", "D", "B", "D", "C", "D", "A", "C", "D", "C", "D", "A", "C", "D", "B", "B", "C", "D", "B", "A", "C", "A", "B", "C", "B", "C", "A", "C", "C", "D", "A", "A", "B", "C", "A", "C", "B", "D", "C", "A", "A", "C", "B", "A", "C", "D", "A", "A", "C", "D", "A"])
+
+dumy(66 , 42,["", "C", "B", "B", "B", "D", "C", "D", "B", "B", "B", "C", "D", "C", "C", "C", "B", "C", "D", "C", "B", "A", "C", "C", "A", "D", "B", "D", "B", "B", "C", "A", "C", "D", "C", "C", "B", "D", "B", "D", "A", "D", "A", "D", "B", "B", "A", "A", "D", "A", "B", "C", "B", "D", "C", "B", "D", "D", "C", "A", "B"])
+
+
+dumy(65 , 36 , ["", "C", "D", "A", "C", "D", "D", "B", "D", "A", "B", "B", "C", "B", "A", "B", "D", "D", "B", "B", "A", "C", "B", "C", "A", "B", "D", "C", "C", "C", "B", "C", "C", "B", "D", "D", "B", "B", "B", "C", "D", "D", "A", "A", "B", "B", "A", "A", "B", "C", "D", "C", "C", "D", "A", "D", "D", "C", "B", "D", "D"])
+
+dumy(64 , 38 , [64 , "C", "A", "D", "B", "A", "C", "A", "C", "C", "A", "D", "B", "B", "B", "D", "A", "D", "C", "D", "C", "C", "D", "B", "C", "C", "B", "B", "D", "C", "D", "C", "A", "C", "A", "C", "B", "A", "D", "B", "D", "C", "C", "D", "C", "B", "A", "B", "D", "C", "A", "C", "A", "B", "C", "A", "A", "C", "C", "A", "A"]u)
